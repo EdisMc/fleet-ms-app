@@ -1,12 +1,12 @@
 
-$('document').ready(function(){
+$('document').ready(function() {
 	
-	$('table #editButton').on('click',function(event){
+	$('table #editButton').on('click',function(event) {
 		event.preventDefault();
 			
 		var href = $(this).attr('href');
 		
-		$.get(href, function(country, status){
+		$.get(href, function(country, status) {
 			$('#idEdit').val(country.id);
 			$('#descriptionEdit').val(country.description);
 			$('#capitalEdit').val(country.capital);
@@ -17,7 +17,7 @@ $('document').ready(function(){
 		$('#editModal').modal();
 	});
 	
-	$('table #deleteButton').on('click', function(event){
+	$('table #deleteButton').on('click', function(event) {
 		event.preventDefault();
 		
 		var href= $(this).attr('href');
